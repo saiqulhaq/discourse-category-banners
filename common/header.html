@@ -2,13 +2,6 @@
   const container = Discourse.__container__;
   const { h } = require('virtual-dom');
 
-  api.createWidget('homepage-header-widget', {
-      tagName: 'span',
-      html(attrs, state) {
-        alert('foo')
-      }
-  })
-
   api.createWidget('category-header-widget', {
       tagName: 'span',
       html(attrs, state) {
@@ -70,8 +63,4 @@
 
 <script type='text/x-handlebars' data-template-name='/connectors/below-site-header/category-header-widget'>
   {{mount-widget widget="category-header-widget"}}
-</script>
-
-<script type='text/x-handlebars' data-template-name='/connectors/below-site-header/homepage-header-widget'>
-  {{mount-widget widget="homepage-header-widget"}}
 </script>
